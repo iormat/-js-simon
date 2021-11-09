@@ -41,7 +41,7 @@ randNumArr.forEach((element) => {
         <div class="numbers flexbox"> ${element} </div>`;
 });    
 // 5.
-setTimeout(hideNumbers, 30000);
+setTimeout(hideNumbers, 10000);
 
 function hideNumbers () {
     // 6.
@@ -50,20 +50,15 @@ function hideNumbers () {
         let userChosenNum = parseInt(prompt("Inserisci i numeri che ricordi uno alla volta:"))
         userNumArr.push(userChosenNum);
     }  
-    randNumArr.forEach((element) => {
-        // 7.1
-        userNumArr.forEach((secondElement) =>{
-            // 7.2
-            if(element === secondElement) {
-                let howMany = document.querySelectorAll('.numbers');  
-                console.log(howMany.length)  
-                document.getElementById('results') .innerHTML = `
-                <h2> Complimenti&excl; Hai indovinato ${howMany.length + 1} numeri </h2>`;          
-                document.getElementById('num-container').innerHTML += `
-                <div class="numbers flexbox"> ${element} </div>
-                `; 
-            }
-        });
-    })
-} 
+    userNumArr.forEach((element) => {
+        // 7.2
+        if(randNumArr.includes(element)) {
+            let howMany = document.querySelectorAll('.numbers');  
+            document.getElementById('results') .innerHTML = `
+            <h2> Complimenti&excl; Hai indovinato ${howMany.length + 1} numeri </h2>`;
 
+            document.getElementById('num-container').innerHTML += `
+            <div class="numbers flexbox"> ${element} </div>`; 
+        }
+    });
+} 
