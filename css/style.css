@@ -36,6 +36,11 @@ header p {
 }
 
 /* MAIN RULES -------------------- */
+#results {
+    text-align: center;
+    margin-top: 30px;
+}
+
 #num-container {
     height: 400px;
 }
