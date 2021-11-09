@@ -1,2 +1,2 @@
-# -js-simon
+# js-simon
 Memory Test EX
