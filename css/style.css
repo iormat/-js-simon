@@ -1,0 +1,53 @@
+/* GENERAL RULES -------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    min-height: 100vh;
+}
+
+/* HEADER RULES -------------------- */
+header {
+    text-align: center;
+    color: #fff;
+    background-color: #000035;
+    padding: 20px 0;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+/* MAIN RULES -------------------- */
+#num-container {
+    height: 400px;
+}
+
+.numbers {
+    width: 70px;
+    background-color: #000035;
+    border: 3px solid #cecece;
+    color: #fff;
+}
+
+.numbers:after {
+    content: '';
+    padding-top: 100%;
+}
